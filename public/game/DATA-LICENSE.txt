@@ -1,0 +1,12 @@
+Map data © OpenStreetMap contributors.
+The derived map database data/nanshan.json + data/region/*.json + data/region-nav.bin is made available under the Open Database License (ODbL) 1.0.
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+
+Downloaded: 2026-11-04. Source: https://api.openstreetmap.org/api/0.6/map
+Coverage: WGS84 113.750,22.480 to 114.040,22.710.
+The distributable JSON contains the derived footprints, road geometry, water polygons, parks and provenance. Full build script: scripts/expand_map.py in the source project.
+Gameplay resources, characters, defenses, events, weather and decorative vegetation are fictional. Unmarked building heights are estimates; terrain is flat and some polygon holes and building parts are simplified.
+
+Three.js is distributed under the MIT license. See vendor/THREE-LICENSE.txt.
+No art, audio, code, logos or other assets from Infection Free Zone are included.

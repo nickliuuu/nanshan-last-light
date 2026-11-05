@@ -1,0 +1,164 @@
+{
+  "bounds": [
+    113.75,
+    22.48,
+    114.04,
+    22.71
+  ],
+  "osmNodes": 846664,
+  "osmWays": 103278,
+  "osmRelations": 2612,
+  "coastFaces": 53,
+  "seaFaces": 4,
+  "labels": [
+    {
+      "id": "airport",
+      "name": "深圳宝安国际机场",
+      "en": "BAOAN AIRPORT",
+      "x": -13434.1,
+      "z": -13075.9,
+      "y": 35,
+      "zoom": 5000,
+      "sourceName": "深圳宝安国际机场"
+    },
+    {
+      "id": "airport-north",
+      "name": "机场北站",
+      "en": "AIRPORT NORTH",
+      "x": -14371.3,
+      "z": -14827.3,
+      "y": 35,
+      "zoom": 1800,
+      "sourceName": "机场北"
+    },
+    {
+      "id": "fenghuang",
+      "name": "凤凰山",
+      "en": "FENGHUANG MOUNTAIN",
+      "x": -8949.1,
+      "z": -16721.5,
+      "y": 35,
+      "zoom": 6500,
+      "sourceName": "凤凰山森林公园"
+    },
+    {
+      "id": "yangtai",
+      "name": "阳台山",
+      "en": "YANGTAI MOUNTAIN",
+      "x": 3306.6,
+      "z": -13800.3,
+      "y": 35,
+      "zoom": 6500,
+      "sourceName": "阳台山森林公园"
+    },
+    {
+      "id": "tiegang",
+      "name": "铁岗水库",
+      "en": "TIEGANG RESERVOIR",
+      "x": -5374.4,
+      "z": -12165.3,
+      "y": 35,
+      "zoom": 6200,
+      "sourceName": "铁岗水库"
+    },
+    {
+      "id": "xili-lake",
+      "name": "西丽湖",
+      "en": "XILI LAKE",
+      "x": 2832.0,
+      "z": -8404.6,
+      "y": 35,
+      "zoom": 5000,
+      "sourceName": "西丽湖"
+    },
+    {
+      "id": "baoan",
+      "name": "宝安中心",
+      "en": "BAOAN CENTRE",
+      "x": -5212.0,
+      "z": -4078.5,
+      "y": 35,
+      "zoom": 2800,
+      "sourceName": "宝安中心"
+    },
+    {
+      "id": "qianhai",
+      "name": "前海",
+      "en": "QIANHAI",
+      "x": -4137.1,
+      "z": -2149.1,
+      "y": 35,
+      "zoom": 3500,
+      "sourceName": "前海湾"
+    },
+    {
+      "id": "xili",
+      "name": "西丽",
+      "en": "XILI",
+      "x": 1609.6,
+      "z": -6177.6,
+      "y": 35,
+      "zoom": 2800,
+      "sourceName": "西丽"
+    },
+    {
+      "id": "tanglang",
+      "name": "塘朗山",
+      "en": "TANGLANG MOUNTAIN",
+      "x": 4546.3,
+      "z": -6278.6,
+      "y": 35,
+      "zoom": 5200,
+      "sourceName": "塘朗山郊野公园"
+    },
+    {
+      "id": "nanshan-park",
+      "name": "南山公园",
+      "en": "NANSHAN PARK",
+      "x": -3487.1,
+      "z": 2788.0,
+      "y": 35,
+      "zoom": 3500,
+      "sourceName": "南山公园"
+    },
+    {
+      "id": "oct",
+      "name": "华侨城",
+      "en": "OCT",
+      "x": 4883.3,
+      "z": -1719.5,
+      "y": 35,
+      "zoom": 2800,
+      "sourceName": "华侨城"
+    },
+    {
+      "id": "pingluan",
+      "name": "平峦山",
+      "en": "PINGLUAN MOUNTAIN",
+      "x": -6192.5,
+      "z": -9992.3,
+      "y": 35,
+      "zoom": 3500,
+      "sourceName": "平峦山公园"
+    },
+    {
+      "id": "hq",
+      "name": "后海安全区",
+      "en": "HOUHAI SAFE ZONE",
+      "x": 76.465,
+      "z": 174.59,
+      "y": 50,
+      "zoom": 1600
+    }
+  ],
+  "counts": {
+    "buildings": 35825,
+    "roads": 42054,
+    "parks": 4365,
+    "airfields": 652
+  },
+  "grid": [
+    1492,
+    1281
+  ]
+}

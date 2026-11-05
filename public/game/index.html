@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111b1e"><meta name="description" content="深圳南山真实地图上的 3D 生存建造游戏。派出小队搜刮物资，建造防线，守住三个夜晚。"><title>南山 · 最后防线 | LAST LIGHT</title><link rel="icon" href="./favicon.svg"><link rel="stylesheet" href="./style.css"></head>
+<body>
+<div id="world" aria-label="南山三维战术地图"></div><div id="map-labels"></div><div class="vignette"></div>
+<div id="loading"><div class="load-mark">◈</div><div class="eyebrow">LAST LIGHT / NANSHAN</div><h1>正在接入南山安全区</h1><p id="load-status">读取真实街区与建筑轮廓…</p><div class="loading-line"><span></span></div></div>
+<header class="topbar">
+  <a class="brand" href="#" id="brand-home" title="回到基地"><span class="brand-mark"><i></i><i></i><i></i></span><span><b>最后防线<span class="brand-dot">.</span></b><small>LAST LIGHT · NANSHAN</small></span></a>
+  <div class="resources" id="resources"></div>
+  <div class="top-actions"><button class="coop-open" id="coop-open" title="双人合作房间" aria-label="双人合作房间">联机</button><button class="icon-button night-shortcut" id="night-demo" title="夜战演练 · 不影响存档" aria-label="夜战演练">☾</button><button class="icon-button" id="sound" title="开启环境音" aria-label="开启环境音"></button><button class="icon-button" id="save" title="保存进度" aria-label="保存进度"></button><button class="icon-button" id="help" title="操作说明" aria-label="操作说明"></button><button class="icon-button" id="settings" title="设置与存档" aria-label="设置与存档"></button></div>
+</header>
+<div class="location"><div class="eyebrow"><span class="status-dot"></span> SHENZHEN · SECTOR 03</div><h1>深圳<span> / </span>西部</h1><p>南山 · 宝安 · 西丽 · 机场<span class="location-line"></span><span id="map-scale-label">扩展地图 / 3D 战术视图</span></p></div>
+<div class="region-nav"><label for="region-select">区域导航</label><select id="region-select" aria-label="区域导航"><option>后海安全区</option></select><span id="stream-status" role="status">正在接入地图…</span></div>
+<section class="clock-panel panel"><div class="clock-top"><span id="day-label">第 01 天</span><span class="weather" id="weather-label">☀ 多云 · 26°C</span></div><div class="clock-time"><span id="time">10:00</span><span id="phase">日间探索</span></div><div class="day-track"><span id="day-progress"></span><i></i></div><div class="time-controls"><button id="pause" title="暂停 / 继续 [空格]" aria-label="暂停或继续">Ⅱ</button><button data-speed="1" class="active">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button><span id="night-countdown">夜幕将至 01:30</span></div></section>
+<aside class="left-rail">
+ <section class="objectives panel"><div class="panel-heading"><span>行动目标</span><span class="tiny">OPERATION 01</span></div><h2>在熟悉的城市，活下去。</h2><p class="mission-summary">建立安全区，守住三个夜晚。</p><div id="objectives"></div><div class="mission-footer"><span>安全区稳定度</span><b id="base-percent">100%</b></div><div class="bar base-bar"><i id="base-bar"></i></div></section>
+ <section class="squad-section"><div class="rail-heading"><span>行动小队</span><span class="tiny">点击选择 · 1 / 2</span></div><div id="squads"></div></section>
+</aside>
+<aside class="right-rail"><section class="selection panel" id="selection"></section><div id="quick-tip" class="quick-tip">选择建筑，派遣小队搜刮物资。<br><span>滚轮缩放 · 拖动平移 · Q / E 旋转</span></div></aside>
+<div id="map-tooltip" class="map-tooltip hidden"></div>
+<div id="build-banner" class="build-banner hidden"></div>
+<div id="demo-banner" class="demo-banner hidden"><span>夜战演练 <small>不影响存档</small></span><button data-action="night-demo">重新演练</button><button data-action="leave-demo">返回原行动 →</button></div>
+<button id="coop-status" class="coop-status hidden" data-action="coop" aria-label="合作房间状态"></button>
+<div id="paused-badge" class="paused-badge hidden"><span>Ⅱ</span> 战术暂停 <small>按空格继续</small></div>
+<section class="radio-log"><div class="rail-heading"><span><span class="live-dot"></span> 无线电通讯</span><button id="log-toggle" class="text-button">收起 −</button></div><div id="logs"></div></section>
+<footer class="bottom-dock"><div class="dock-top"><span><i class="square-dot"></i> 建设安全区</span><small id="build-hint">选择设施，然后在基地附近空地放置</small><span class="dock-key">B</span></div><div class="build-options" id="build-options"></div></footer>
+<div class="map-tools"><button id="zoom-in" title="放大" aria-label="放大">+</button><button id="zoom-out" title="缩小" aria-label="缩小">−</button><span></span><button id="overview" title="全域总览 [G]" aria-label="全域总览">▦</button><button id="home" title="定位基地 [H]" aria-label="定位基地">⌖</button><button id="view" title="俯视 / 透视 [V]" aria-label="切换视角">◇</button><button id="labels" class="active" title="显示 / 隐藏地名 [L]" aria-label="切换地名">字</button></div>
+<section class="minimap panel"><div class="minimap-title"><span>区域态势</span><span id="compass">N ↑</span></div><canvas id="minimap" width="440" height="260" aria-label="小地图，点击移动视角"></canvas><div class="minimap-bottom"><span><i class="legend-safe"></i>安全区</span><span><i class="legend-enemy"></i>感染者</span><b id="zoom-level">100%</b></div></section>
+<div class="map-credit"><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors · ODbL</a><span>建筑高度含估算 · 双人合作版 v1.3</span></div>
+<div class="coordinate"><span id="coordinates">22.5200° N / 113.9330° E</span><span class="scale-rule">200 m</span></div>
+<div id="toast" role="status" class="toast hidden"></div>
+<div id="modal-backdrop" class="modal-backdrop hidden"><section id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section></div>
+<script type="module" src="./game.js"></script>
+</body></html>
